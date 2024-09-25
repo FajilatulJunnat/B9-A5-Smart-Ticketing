@@ -37,14 +37,166 @@
     </script>
 </head>
 <body>
+  <!-- navber -->
+  <div class="navbar bg-base-100 container mx-auto">
+    <div class="navbar-start">
+      <div class="dropdown">
+        <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="h-5 w-5"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor">
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M4 6h16M4 12h8m-8 6h16" />
+          </svg>
+        </div>
+        <ul
+          tabindex="0"
+          class="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow">
+          <li><a>Home</a></li>
+          <li><a>About</a></li>
+          <li><a>Destination</a></li>
+          <li><a>Search</a></li>
+        </ul>
+      </div>
+      <a class="btn btn-ghost text-xl">P-Ticket</a>
+    </div>
+    <div class="navbar-center hidden lg:flex">
+      <ul class="menu menu-horizontal px-1">
+        <li><a>Home</a></li>
+          <li><a>About</a></li>
+          <li><a>Destination</a></li>
+          <li><a>Search</a></li>
+      </ul>
+    </div>
+    <div class="navbar-end">
+      <a class="btn bg-buttoncolor text-primary">Bus <img src="./images/bus-icon.png" alt=""></a>
+    </div>
+  </div>
+  <!-- carousel -->
+   <section class="container mx-auto my-8">
+  <div class="carousel w-full ">
+    <div id="slide1" class="carousel-item relative w-full">
+      <img
+        src="./images/banner.png"
+        class="w-full" />
+      <div class="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between">
+        <a href="#slide4" class="btn btn-circle">❮</a>
+        <a href="#slide2" class="btn btn-circle">❯</a>
+      </div>
+    </div>
+    <div id="slide2" class="carousel-item relative w-full">
+      <img
+        src="https://img.daisyui.com/images/stock/photo-1609621838510-5ad474b7d25d.webp"
+        class="w-full" />
+      <div class="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between">
+        <a href="#slide1" class="btn btn-circle">❮</a>
+        <a href="#slide3" class="btn btn-circle">❯</a>
+      </div>
+    </div>
+    <div id="slide3" class="carousel-item relative w-full">
+      <img
+        src="https://img.daisyui.com/images/stock/photo-1414694762283-acccc27bca85.webp"
+        class="w-full" />
+      <div class="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between">
+        <a href="#slide2" class="btn btn-circle">❮</a>
+        <a href="#slide4" class="btn btn-circle">❯</a>
+      </div>
+    </div>
+    <div id="slide4" class="carousel-item relative w-full">
+      <img
+        src="https://img.daisyui.com/images/stock/photo-1665553365602-b2fb8e5d1707.webp"
+        class="w-full" />
+      <div class="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between">
+        <a href="#slide3" class="btn btn-circle">❮</a>
+        <a href="#slide1" class="btn btn-circle">❯</a>
+      </div>
+    </div>
+  </div>
+  <!-- card -->
+   <div class="flex items-center justify-center gap-4 relative -mt-16">
+    <div class="card flex lg:flex-row flex-col  bg-base-100 shadow-xl items-center border-b-2 lg:px-4 px-0 border-primary">
+      <figure>
+        <img
+          src="./images/people.png">
+      </figure>
+      <div class="card-body">
+        <h2 class="card-title">500K+</h2>
+        <p>Registered users</p>
+      </div>
+    </div>
+    <div class="card flex lg:flex-row flex-col  bg-base-100 shadow-xl items-center border-b-2 border-primary lg:px-4 px-0">
+      <figure>
+        <img
+          src="./images/ticket-cupon.png">
+      </figure>
+      <div class="card-body">
+        <h2 class="card-title">1.7lacks</h2>
+        <p>Ticket sold</p>
+      </div>
+    </div>
+    <div class="card flex lg:flex-row flex-col  bg-base-100 shadow-xl items-center border-b-2 border-primary lg:px-4 px-0">
+      <figure>
+        <img
+          src="./images/stoppage.png">
+      </figure>
+      <div class="card-body">
+        <h2 class="card-title">80K+</h2>
+        <p>Rental partners</p>
+      </div>
+    </div>
+   </div>
+   <!-- offer -->
+    <div class="space-y-8 my-10 items-center flex flex-col">
+      <h1 class="font-bold text-4xl text-center">Best offers for you</h1>
+    
+    <div class="flex lg:flex-row flex-col gap-8 my-8">
+      <div class="flex bg-quponone rounded-xl w-full">
+        <div class="w-3/5 p-8">
+          <h2 class="font-bold text-4xl">15% OFF</h2>
+          <p class="font-semibold text-xl">on your next purchase</p>
+          <p>use by January 2024</p>
+        </div>
+        <img src="./images/cupon-devider.png" alt="">
+        <div class="p-8 flex flex-col justify-center">
+          <h2 class="text-3xl">NEW15</h2>
+          <p>Coupon Code</p>
+        </div>
+      </div>
+
+      <div class="flex bg-qupontwo rounded-xl w-full">
+        <div class="w-3/5 p-8">
+          <h2 class="font-bold text-4xl">20% OFF</h2>
+          <p class="font-semibold text-xl">on your next purchase</p>
+          <p>use by January 2024</p>
+        </div>
+        <img src="./images/cupon-devider.png" alt="">
+        <div class="p-8 flex flex-col justify-center">
+          <h2 class="text-3xl">Couple 20</h2>
+          <p>Coupon Code</p>
+        </div>
+      </div>
+    </div>
+    <button class="btn btn-outline text-primary outline-primary ">See All Offers</button>
+  </div>
+</section>
   <!-- select seat -->
-    <section class="bg-mobilemenu rounded-t-lg border-t-2 border-primary py-12">
-      <section class="mx-auto container bg-white rounded-lg  py-3 m-4">
-        <div class="w-3/4">
+    <section class="bg-mobilemenu rounded-t-3xl border-t-2 border-primary py-12">
+      <div class="text-center flex flex-col gap-4 items-center">
+        <h1 class="font-bold text-4xl">P.H Paribahan</h1>
+        <p class="w-2/4">Yes, you can run unit tests and view the results directly within the app. The integrated testing features allow for a streamlined .</p>
+      </div>
+      <section class="mx-auto container bg-white rounded-lg flex m-4">
+        <div class="w-3/4 p-8">
           <div class="flex justify-between">
             <div class="flex w-3/4 space-x-4">
               <img src="./images/bus-logo.png" alt="">
-              <div><h3>Greenline Poribohon</h3>
+              <div><h3 class="font-bold text-3xl">Greenline Poribohon</h3>
               <p>Coach-009-WEB ! AC_Business</p></div>
             </div>
             <div class="text-primary rounded-xl p-4 bg-buttoncolor font-bold">
@@ -54,11 +206,16 @@
             </div>
           </div>
         </div>
-        <div class="col-span-1"></div>
+        <img src="./images/info-devider.png" alt="">
+        <div class="flex items-center justify-center flex-col">
+          <img src="./images/fare.png" alt="">
+          <h1 class="font-bold text-4xl">550 Taka</h1>
+          <p>Per Seat</p>
+        </div>
       </section>
-      <section class="mx-auto container bg-white rounded-lg grid grid-cols-3 py-3">
+      <section class="mx-auto container bg-white rounded-lg grid  grid-cols-2 lg:grid-cols-3 py-3">
         <!-- left part -->
-        <div class="col-span-2 border-r-2 border-dashed p-4">
+        <div class="col-span-2  border-r-2 border-dashed p-4">
           <h1 class="border-b-2 border-dashed pb-4">Select Your Seat</h1>
           <div class="flex justify-between p-4 border-b-2 border-dashed ">
             <div><i class="fa-solid fa-couch"></i><span>Available</span></div>
@@ -162,7 +319,7 @@
          </section>
         </div>
         <!-- right part -->
-         <div class="col-span-1 p-4">
+         <div class="lg:col-span-1 col-span-2 p-4">
           <h1 class="border-b-2 border-dashed pb-4">Select Your Seat</h1>
           
             <div class="bg-mobilemenu rounded-lg p-4 my-4">
