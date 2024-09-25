@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Ticketing</title>
+    <!-- fonwasome -->
+    <script src="https://kit.fontawesome.com/88125b6bbe.js" crossorigin="anonymous"></script>
+    <!-- google font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+
+    <!-- tailwind cdn + Daisi UI -->
+<link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              primary: '#1DD100',
+              secondary: '#030712',
+              quponone: '#FFBF0F',
+              qupontwo: '#F78C9C',
+              mobilemenu: '#F7F8F8',
+              body: '#03071299',
+              buttoncolor: 'rgba(29,209,0,0.15)',
+            },
+            fontFamily: {
+                inter :['Inter'],
+                raleway:['Raleway']
+              }
+          }
+        }
+      }
+    </script>
+</head>
+<body>
+  <!-- select seat -->
+    <section class="bg-mobilemenu rounded-t-lg border-t-2 border-primary py-12">
+      <section class="mx-auto container bg-white rounded-lg  py-3 m-4">
+        <div class="w-3/4">
+          <div class="flex justify-between">
+            <div class="flex w-3/4 space-x-4">
+              <img src="./images/bus-logo.png" alt="">
+              <div><h3>Greenline Poribohon</h3>
+              <p>Coach-009-WEB ! AC_Business</p></div>
+            </div>
+            <div class="text-primary rounded-xl p-4 bg-buttoncolor font-bold">
+              <i class="fa-solid fa-couch"></i>
+              <span id="Available-seat">40</span>
+              <span>Seat left</span>
+            </div>
+          </div>
+        </div>
+        <div class="col-span-1"></div>
+      </section>
+      <section class="mx-auto container bg-white rounded-lg grid grid-cols-3 py-3">
+        <!-- left part -->
+        <div class="col-span-2 border-r-2 border-dashed p-4">
+          <h1 class="border-b-2 border-dashed pb-4">Select Your Seat</h1>
+          <div class="flex justify-between p-4 border-b-2 border-dashed ">
+            <div><i class="fa-solid fa-couch"></i><span>Available</span></div>
+            <div class="text-primary"><i class="fa-solid fa-couch"></i><span>Selected</span></div>
+          </div>
+         <section>
+          <div class="grid grid-cols-10 py-3 gap-8">
+            <p class="col-span-8"></p>
+            <button class="col-span-2 bg-mobilemenu rounded-lg py-3"><i class="fa-solid fa-peace"></i></button>
+          </div>
+          <div class="grid grid-cols-10 py-3 gap-8 items-center">
+            <p class="col-span-1 text-center">A</p>
+            <button onclick="selectedSeat(this)" class="col-span-2 bg-mobilemenu rounded-lg py-3 hover:bg-secondary hover:text-white">A1</button>
+            <button onclick="selectedSeat(this)" class="col-span-2 bg-mobilemenu rounded-lg py-3 hover:bg-secondary hover:text-white">A2</button>
+            <p class="col-span-1"></p>
+            <button onclick="selectedSeat(this)" class="col-span-2 bg-mobilemenu rounded-lg py-3 border-primary border hover:bg-secondary hover:text-white">A3</button>
+            <button onclick="selectedSeat(this)" class="col-span-2 bg-mobilemenu rounded-lg py-3 border-primary border hover:bg-secondary hover:text-white">A4</button>
+          </div>
+
+          <div class="grid grid-cols-10 py-3 gap-8 items-center">
+            <p class="col-span-1 text-center">B</p>
+            <button onclick="selectedSeat(this)" class="col-span-2 bg-mobilemenu rounded-lg py-3 hover:bg-secondary hover:text-white">B1</button>
+            <button onclick="selectedSeat(this)" class="col-span-2 bg-mobilemenu rounded-lg py-3 hover:bg-secondary hover:text-white">B2</button>
+            <p class="col-span-1"></p>
+            <button onclick="selectedSeat(this)" class="col-span-2 bg-mobilemenu rounded-lg py-3 border-primary border hover:bg-secondary hover:text-white">B3</button>
+            <button onclick="selectedSeat(this)" class="col-span-2 bg-mobilemenu rounded-lg py-3 border-primary border hover:bg-secondary hover:text-white">B4</button>
+          </div>
+          
+          <div class="grid grid-cols-10 py-3 gap-8 items-center">
+            <p class="col-span-1 text-center">C</p>
+            <button onclick="selectedSeat(this)" class="col-span-2 bg-mobilemenu rounded-lg py-3 hover:bg-secondary hover:text-white">C1</button>
+            <button onclick="selectedSeat(this)" class="col-span-2 bg-mobilemenu rounded-lg py-3 hover:bg-secondary hover:text-white">C2</button>
+            <p class="col-span-1"></p>
+            <button onclick="selectedSeat(this)" class="col-span-2 bg-mobilemenu rounded-lg py-3 border-primary border hover:bg-secondary hover:text-white">C3</button>
+            <button onclick="selectedSeat(this)" class="col-span-2 bg-mobilemenu rounded-lg py-3 border-primary border hover:bg-secondary hover:text-white">C4</button>
+          </div>
+
+          <div class="grid grid-cols-10 py-3 gap-8 items-center">
+            <p class="col-span-1 text-center">D</p>
+            <button onclick="selectedSeat(this)" class="col-span-2 bg-mobilemenu rounded-lg py-3 hover:bg-secondary hover:text-white">D1</button>
+            <button onclick="selectedSeat(this)" class="col-span-2 bg-mobilemenu rounded-lg py-3 hover:bg-secondary hover:text-white">D2</button>
+            <p class="col-span-1"></p>
+            <button onclick="selectedSeat(this)" class="col-span-2 bg-mobilemenu rounded-lg py-3 border-primary border hover:bg-secondary hover:text-white">D3</button>
+            <button onclick="selectedSeat(this)" class="col-span-2 bg-mobilemenu rounded-lg py-3 border-primary border hover:bg-secondary hover:text-white">D4</button>
+          </div>
+
+          <div class="grid grid-cols-10 py-3 gap-8 items-center">
+            <p class="col-span-1 text-center">E</p>
+            <button onclick="selectedSeat(this)" class="col-span-2 bg-mobilemenu rounded-lg py-3 hover:bg-secondary hover:text-white">E1</button>
+            <button onclick="selectedSeat(this)" class="col-span-2 bg-mobilemenu rounded-lg py-3 hover:bg-secondary hover:text-white">E2</button>
+            <p class="col-span-1"></p>
+            <button onclick="selectedSeat(this)" class="col-span-2 bg-mobilemenu rounded-lg py-3 border-primary border hover:bg-secondary hover:text-white">E3</button>
+            <button onclick="selectedSeat(this)" class="col-span-2 bg-mobilemenu rounded-lg py-3 border-primary border hover:bg-secondary hover:text-white">E4</button>
+          </div>
+
+          <div class="grid grid-cols-10 py-3 gap-8 items-center">
+            <p class="col-span-1 text-center">F</p>
+            <button onclick="selectedSeat(this)" class="col-span-2 bg-mobilemenu rounded-lg py-3 hover:bg-secondary hover:text-white">F1</button>
+            <button onclick="selectedSeat(this)" class="col-span-2 bg-mobilemenu rounded-lg py-3 hover:bg-secondary hover:text-white">F2</button>
+            <p class="col-span-1"></p>
+            <button onclick="selectedSeat(this)" class="col-span-2 bg-mobilemenu rounded-lg py-3 border-primary border hover:bg-secondary hover:text-white">F3</button>
+            <button onclick="selectedSeat(this)" class="col-span-2 bg-mobilemenu rounded-lg py-3 border-primary border hover:bg-secondary hover:text-white">F4</button>
+          </div>
+
+          <div class="grid grid-cols-10 py-3 gap-8 items-center">
+            <p class="col-span-1 text-center">G</p>
+            <button onclick="selectedSeat(this)" class="col-span-2 bg-mobilemenu rounded-lg py-3 hover:bg-secondary hover:text-white">G1</button>
+            <button onclick="selectedSeat(this)" class="col-span-2 bg-mobilemenu rounded-lg py-3 hover:bg-secondary hover:text-white">G2</button>
+            <p class="col-span-1"></p>
+            <button onclick="selectedSeat(this)" class="col-span-2 bg-mobilemenu rounded-lg py-3 border-primary border hover:bg-secondary hover:text-white">G3</button>
+            <button onclick="selectedSeat(this)" class="col-span-2 bg-mobilemenu rounded-lg py-3 border-primary border hover:bg-secondary hover:text-white">G4</button>
+          </div>
+
+          <div class="grid grid-cols-10 py-3 gap-8 items-center">
+            <p class="col-span-1 text-center">H</p>
+            <button onclick="selectedSeat(this)" class="col-span-2 bg-mobilemenu rounded-lg py-3 hover:bg-secondary hover:text-white">H1</button>
+            <button onclick="selectedSeat(this)" class="col-span-2 bg-mobilemenu rounded-lg py-3 hover:bg-secondary hover:text-white">H2</button>
+            <p class="col-span-1"></p>
+            <button onclick="selectedSeat(this)" class="col-span-2 bg-mobilemenu rounded-lg py-3 border-primary border hover:bg-secondary hover:text-white">H3</button>
+            <button onclick="selectedSeat(this)" class="col-span-2 bg-mobilemenu rounded-lg py-3 border-primary border hover:bg-secondary hover:text-white">H4</button>
+          </div>
+
+          <div class="grid grid-cols-10 py-3 gap-8 items-center">
+            <p class="col-span-1 text-center">I</p>
+            <button onclick="selectedSeat(this)" class="col-span-2 bg-mobilemenu rounded-lg py-3 hover:bg-secondary hover:text-white">I1</button>
+            <button onclick="selectedSeat(this)" class="col-span-2 bg-mobilemenu rounded-lg py-3 hover:bg-secondary hover:text-white">I2</button>
+            <p class="col-span-1"></p>
+            <button onclick="selectedSeat(this)" class="col-span-2 bg-mobilemenu rounded-lg py-3 border-primary border hover:bg-secondary hover:text-white">I3</button>
+            <button onclick="selectedSeat(this)" class="col-span-2 bg-mobilemenu rounded-lg py-3 border-primary border hover:bg-secondary hover:text-white">I4</button>
+          </div>
+
+          <div class="grid grid-cols-10 py-3 gap-8 items-center">
+            <p class="col-span-1 text-center">J</p>
+            <button onclick="selectedSeat(this)" class="col-span-2 bg-mobilemenu rounded-lg py-3 hover:bg-secondary hover:text-white">J1</button>
+            <button onclick="selectedSeat(this)" class="col-span-2 bg-mobilemenu rounded-lg py-3 hover:bg-secondary hover:text-white">J2</button>
+            <p class="col-span-1"></p>
+            <button onclick="selectedSeat(this)" class="col-span-2 bg-mobilemenu rounded-lg py-3 border-primary border hover:bg-secondary hover:text-white">J3</button>
+            <button onclick="selectedSeat(this)" class="col-span-2 bg-mobilemenu rounded-lg py-3 border-primary border hover:bg-secondary hover:text-white">J4</button>
+          </div>
+
+         </section>
+        </div>
+        <!-- right part -->
+         <div class="col-span-1 p-4">
+          <h1 class="border-b-2 border-dashed pb-4">Select Your Seat</h1>
+          
+            <div class="bg-mobilemenu rounded-lg p-4 my-4">
+              <div class="flex justify-between font-semibold border-b-2 border-dashed pb-4">
+                <p class="flex"><span>Seat</span>
+                <span id="selected-seat-count" class="h-4 w-4 rounded-full text-sm text-white bg-primary text-center ">0</span></p>
+                <p>Class</p>
+                <p>Price</p>
+              </div>
+              <div>
+                <ul id="selected-seat-show" class="p-2">
+                  <h3 id="default-text" class="text-error font-semibold text-lg text-center ">No seat booked</h3>
+                 
+                </ul>
+                <div class="border-b-2 "></div>
+                <div class="flex justify-between font-bold">
+                  <p>Total Price</p>
+                  <P>BDT: <span id="totalprice">****</span></P>
+                </div>
+                <div id="show-cupon-price" class="flex justify-between items-center my-3">
+                  <input  type="text" name="" id="cupon-input" disabled placeholder="Have Any cupon?" class="input-primary rounded-lg p-4">
+                  <button id="cupon-btn" class=" btn bg-primary rounded-lg " disabled>Apply</button>
+                </div>
+                <div class="flex justify-between font-bold">
+                  <p>Grand Total</p>
+                  <P>BDT: <span id="grand-total">****</span></P>
+                </div>
+              </div>
+            </div>
+            <!-- form -->
+            <label class="form-control w-full">
+              <div class="label">
+                <span class="label-text font-bold">Passenger Name*</span>
+              </div>
+              <input type="text" placeholder="Enter Your Name" class="input input-bordered w-full"/>
+            </label>
+            <label class="form-control w-full">
+              <div class="label">
+                <span class="label-text font-bold">Phone Number*</span>
+              </div>
+              <input id="input-number" disabled type="number" placeholder="Enter Your Phonr Number" class="input input-bordered w-full"/>
+            </label>
+            <label class="form-control w-full">
+              <div class="label">
+                <span class="label-text font-bold">Email Id*</span>
+              </div>
+              <input type="text" placeholder="Enter Your Email Id" class="input input-bordered w-full"/>
+            </label>
+             <!-- Open the modal using ID.showModal() method -->
+            <button id="next-btn" class="btn w-full bg-primary text-white font-bold rounded-lg my-5 text-lg" disabled onclick="my_modal_5.showModal()">Next</button>
+<dialog id="my_modal_5" class="modal modal-bottom sm:modal-middle">
+  <div class="modal-box flex flex-col justify-center items-center">
+    <div><img src="./images/success.png" alt=""></div>
+    <h3 class="text-lg font-bold text-primary">Success</h3>
+    <p class="py-4 font-semibold text-center">Thank you for Booking Our Bus Seats. 
+      We are working hard to find the best service and deals for you. 
+     </p>
+     <p> Shortly you will find a confirmation in your email.</p>
+    <div class="modal-action flex justify-center">
+      <form method="dialog">
+        <!-- if there is a button in form, it will close the modal -->
+        <button id="continue-btn" class="btn bg-primary rounded-3xl px-12 text-white">Continue</button>
+      </form>
+    </div>
+  </div>
+</dialog>
+
+<div class="flex justify-between">
+  <a href="#" class="underline font-semibold hover:text-primary trasi duration-200 ease-in-out">Term and Condition</a>
+  <a href="#" class="underline font-semibold hover:text-primary trasi duration-200 ease-in-out">Cencellation Policy</a>
+</div>
+
+         </div>
+      </section>
+    </section>
+
+    <script src="./function.js"></script>
+</body>
+</html>
